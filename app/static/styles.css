@@ -1,0 +1,48 @@
+/* Style from https://coolors.co/3066be-119da4-6d9dc5-80ded9-aeecef */
+html {
+  background: #fc6622;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fc6622, #68993a);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fc6622, #68993a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+body {
+  color: #fff;
+  font-family: Helvetica, Arial;
+  font-weight: normal;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 16px;
+}
+.header {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding-top: 20px;
+}
+.content {
+    width: 75%;
+    height: auto;
+    padding: 20px;
+    background: transparent;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.footer {
+    bottom: 0px;
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+}
+h1 {
+    margin: 0;
+    font-weight: normal;
+}
+a:visited, a:link, a:active{
+  color: #fff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
