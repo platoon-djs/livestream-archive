@@ -22,7 +22,7 @@ or
 Stuff should now be running at [http://localhost:5002](http://localhost:5002). 
 
 ### Parsing of folder names
-The server uses the folder name for each video to create a title to the video. Underscores and dashes are replaced by whitespaces.
+The server uses the folder name for each video to create a title to the video. Underscores are replaced by whitespaces.
 
 ### Dev
 To setup dev environment, do a manual build and then run `make dev`. This ensures that edited files are automatically copied to the docker container once they're saved.
