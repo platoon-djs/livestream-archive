@@ -6,4 +6,4 @@ run:
 
 dev:
 	docker build -t livestream-archive .
-	docker run -p 5002:5002 -v ~/platoon-djs/livestreams/:/var/www/static/streams -v `pwd`/app/:/var/www/ livestream-archive
+	docker run -p 5002:5002 -v ~/platoon-djs/livestreams/:/var/www/static/streams -v `pwd`/app/:/var/www/ -d livestream-archive
