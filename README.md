@@ -3,14 +3,14 @@ An docker container with [Flask](http://flask.pocoo.org/). It's used to simply  
 ## Prereqs
 In order to run the image, [Docker](https://www.docker.com/) is reqiured.
 ## Setup
-There are two ways of building the image.   
+There are two ways of building the image. First do:
+* `git clone https://github.com/platoon-djs/livestream-archive.git`
+* `cd livestream-archive`
 
 **Recommended build:** the easiest way is to use make:   
 ```make build```
 
 **Manual build:** if you want to build it yourself you can do so by cloning the repo and then build it:
-* `git clone https://github.com/platoon-djs/livestream-archive.git`
-* `cd livestream-archive`
 * `docker build -t livestream-archive .`
 
 ### Running
