@@ -22,7 +22,7 @@ def my_index():
 			for file in files:
 				if file.endswith(".mp4"):
 					stream = Stream()
-					stream.name = folder.replace("_", " ").replace("-", " ")
+					stream.name = folder.replace("_", " ")
 					stream.filepath = 'static/streams/' + folder + '/' + file
 					streams.append(stream)
 	return render_template('index.html', streams=streams)
