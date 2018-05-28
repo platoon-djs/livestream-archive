@@ -8,15 +8,15 @@ There are two ways of building the image. First do:
 * `cd livestream-archive`
 
 **Recommended build:** the easiest way is to use make:   
-```make build```
+* ```make build```
 
 **Manual build:** if you want to build it yourself you can do so by cloning the repo and then build it:
 * `docker build -t livestream-archive .`
 
 ### Running
 To run the container; use:   
-`make run`
-or 
+`make run`    
+or     
 ```docker run -p 5002:5002 -d -v ~/platoon-djs/livestreams/:/var/www/static/streams livestream-archive```
 
 Stuff should now be running at [http://localhost:5002](http://localhost:5002). 
