@@ -14,6 +14,7 @@ basedir = "/var/www/static/streams"
 @app.route('/')
 def my_index():
 	folders = os.listdir (basedir) # get all files' and folders' names in the current directory
+	folders.sort(key=lambda x: os.path.getmtime(os.path.join(os.path.abspath(basedir), x)))
 	streams = []
 	for folder in folders: # loop through all the files and folders
 		folderPath = os.path.join(os.path.abspath(basedir), folder)
