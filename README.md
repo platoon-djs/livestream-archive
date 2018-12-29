@@ -1,10 +1,10 @@
 # Livestream Archive
-An docker container with [Flask](http://flask.pocoo.org/). It's used to simply  view recorded livestreams within Platoon DJs. The livestreams are located at Platoon NAS in folder `~/platoon-djs/livestreams`.
+An docker container with [Flask](http://flask.pocoo.org/). It's used to simply  view recorded livestreams within Platoon DJs. The livestreams are located at Platoon NAS in folder `/sites/archive.platoon.se`.
 ## Prereqs
 In order to run the image, [Docker](https://www.docker.com/) is reqiured.
 ## Quickstart
 To automatically fetch and run the image, simply do this one-liner:   
-```docker run -p 5002:5002 -d -v ~/sites/archive.platoon.se/:/var/www/static/streams --restart always platoondjs/livestream-archive```
+```docker run -p 5002:5002 -d -v /sites/archive.platoon.se/:/var/www/static/streams --restart always platoondjs/livestream-archive```
 ## Development
 There are two ways of building the image. First do:
 * `git clone https://github.com/platoon-djs/livestream-archive.git`
@@ -20,7 +20,7 @@ There are two ways of building the image. First do:
 To run the container; use:   
 `make run`    
 or     
-```docker run -p 5002:5002 -d -v ~/sites/archive.platoon.se/:/var/www/static/streams livestream-archive```
+```docker run -p 5002:5002 -d -v /sites/archive.platoon.se/:/var/www/static/streams livestream-archive```
 
 Stuff should now be running at [http://localhost:5002](http://localhost:5002). 
 
