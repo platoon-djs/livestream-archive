@@ -2,13 +2,16 @@
 An docker container with [Flask](http://flask.pocoo.org/). It's used to simply  view recorded livestreams within Platoon DJs. The livestreams are located at Platoon NAS in folder `~/platoon-djs/livestreams`.
 ## Prereqs
 In order to run the image, [Docker](https://www.docker.com/) is reqiured.
-## Setup
+## Quickstart
+To automatically fetch and run the image, simply do this one-liner:   
+```docker run -p 5002:5002 -d -v ~/sites/archive.platoon.se/:/var/www/static/streams --restart always platoondjs/livestream-archive```
+## Development
 There are two ways of building the image. First do:
 * `git clone https://github.com/platoon-djs/livestream-archive.git`
-* `cd livestream-archive`
+* `cd livestream-archive`   
 
 **Recommended build:** the easiest way is to use make:   
-* ```make build```
+* ```make dev```
 
 **Manual build:** if you want to build it yourself you can do so by cloning the repo and then build it:
 * `docker build -t livestream-archive .`
@@ -17,14 +20,9 @@ There are two ways of building the image. First do:
 To run the container; use:   
 `make run`    
 or     
-```docker run -p 5002:5002 -d -v ~/platoon-djs/livestreams/:/var/www/static/streams livestream-archive```
+```docker run -p 5002:5002 -d -v ~/sites/archive.platoon.se/:/var/www/static/streams livestream-archive```
 
 Stuff should now be running at [http://localhost:5002](http://localhost:5002). 
 
 ### Parsing of folder names
 The server uses the folder name for each video to create a title to the video. Underscores are replaced by whitespaces.
-
-### Dev
-To setup dev environment, do a manual build and then run `make dev`. This ensures that edited files are automatically copied to the docker container once they're saved.
-
-
